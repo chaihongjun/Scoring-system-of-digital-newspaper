@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="../style/base.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../font/iconfont.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../style/common.css">
+  <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.2/jquery.min.js"></script>
+
+</head>
+
+<body>
+  <div class="wrapper" style="width: 1146px;margin: 0 auto;">
+
+
+    <!-- ================================== 大块 start ================================== -->
+    <div class="page-default-item">
+      <div class="page-head">
+        <div class="page-btitle">
+          <span class="vertically">第一版 要闻</span>
+        </div>
+        <div style="width:496px;display: table-cell;font-size: 0;line-height: 1;">
+          <div class="page-score-title-box">
+            <div class="page-score-title">责编&amp;得分</div>
+            <div class="page-score-title-body">
+              <div class="add-btn-box">
+                <div class="add-btn vertically" data-type="editor">
+                  <i class="icon iconfont icon-shanchu2 append-btn"></i>
+                </div>
+              </div>
+              <div class="person-choosed-box editor-member-list">
+
+                <!-- ======================================= 责编列表 ======================================= -->
+                <ul class="choosed-wrapper editor-group" id='editor-member-list'>
+                  <!-- <li class="person-choosed-item"><span>马杰8</span><input type="text" name="" value="98"><i class="icon iconfont icon-shanchu11"></i></li> -->
+                </ul>
+
+              </div>
+            </div>
+          </div>
+          <div class="page-score-title-box">
+            <div class="page-score-title">组版&amp;得分</div>
+            <div class="page-score-title-body">
+              <div class="add-btn-box">
+                <div class="add-btn vertically" data-type="groupEdition">
+                  <i class="icon iconfont icon-shanchu2"></i>
+                </div>
+              </div>
+              <div class="person-choosed-box layout-member-list">
+                <!-- ======================================= 组版列表 ======================================= -->
+                <ul class="layout-group">
+
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="preview-box preview-btn">
+            <span class="vertically">查看</span>
+          </div>
+        </div>
+      </div>
+      <div class="page-body">
+        <div id="page-body-wrapper">
+          <div class="page-body-head">
+            <div class="page-body-head-wrapper">
+              <div class="page-body-head-item tit">文章标题</div>
+              <div class="page-body-head-item word">字数</div>
+              <div class="page-body-head-item brower">浏览量</div>
+              <div class="page-body-head-item type">稿件类型</div>
+              <div class="page-body-head-item grade">稿件等级</div>
+              <div class="page-body-head-item reporter">记者&amp;得分</div>
+              <div class="page-body-head-item corresp">通讯员&amp;得分</div>
+              <div class="page-body-head-item preview"></div>
+            </div>
+          </div>
+          <div class="page-body-list">
+
+            <!-- ============================ 板块新闻列表 ============================ -->
+            <div class="page-body-list-wrapper">
+              <div class="page-body-list-item tit">
+                <div class="vertically width_full article-title">文章标题文章标题文章标</div>
+              </div>
+              <div class="page-body-list-item word">
+                <div class="vertically width_full">字数</div>
+              </div>
+              <div class="page-body-list-item brower ">
+                <div class="vertically width_full">520</div>
+                <i class="brower-tip"></i>
+                <div class="brower-list transition_3">
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <th>手机版</th>
+                      <th>web版</th>
+                    </tr>
+                    <tr>
+                      <td>fddf</td>
+                      <td>fddf</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div class="page-body-list-item type">
+                <div class="vertically width_full">
+                  <select>
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="opel">Opel</option>
+                    <option value="audi">Audi</option>
+                  </select>
+                </div>
+              </div>
+              <div class="page-body-list-item grade">
+                <div class="vertically width_full">稿件等级</div>
+              </div>
+              <div class="page-body-list-item add-btn-box add-btn-box2">
+                <div class="add-btn vertically">
+                  <i class="icon iconfont icon-shanchu2"></i>
+                </div>
+              </div>
+              <div class="page-body-list-item person-choosed-box person-choosed-box2 reporter-member-list" style="vertical-align: top;width: 184px;">
+
+                <!-- ======================================= 记者列表 ======================================= -->
+                <ul class="reporter-group">
+
+                </ul>
+              </div>
+              <div class="page-body-list-item add-btn-box add-btn-box2">
+                <div class="add-btn vertically">
+                  <i class="icon iconfont icon-shanchu2"></i>
+                </div>
+              </div>
+              <div class="page-body-list-item person-choosed-box person-choosed-box2 caller-member-list" style="vertical-align: top;width: 184px;">
+
+                <!-- ======================================= 通讯员列表 ======================================= -->
+                <ul class="caller-group">
+
+                </ul>
+              </div>
+              <div class="page-body-list-item preview preview-btn">
+                <div class="vertically width_full">查看</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="action-btn-box">
+          <button class="inline_block save-btn">保存</button>
+          <div class="inline_block slide-box" id="slide-up">收起
+            <i class="icon iconfont icon-shouqi"></i>
+          </div>
+          <div class="inline_block slide-box" id="slide-down" style="display:none;">展开
+            <i class="icon iconfont icon-shouqi1"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ================================== 大块 end ================================== -->
+
+  </div>
+  <!-- 弹窗 -->
+  <!-- 添加责编弹层 -->
+  <div class="dialog " style="display: none;" id="editor">
+    <div class="dialog_shadow_black">
+      <div class="alert_dialog_content">
+        <div class="alert_dialog_head">
+          <span id="title">添加责编</span>
+          <i class="icon iconfont icon-chuyidong"></i>
+        </div>
+        <div class="alert_dialog_body alert_dialog_body2 add-editor-box">
+          <div class="alert_dialog_content_wrapper">
+            <div class="search-bar">
+              <input type="text" name="" placeholder="请搜索你要查询的人">
+              <button type="button">
+                <i class="icon iconfont icon-123"></i>
+              </button>
+            </div>
+            <div class="editor-list-box">
+              <ul class="clx" id='editor-list'>
+                <li class="editor-list">责编1<i class="tip"></i>
+                </li>
+                    <li class="editor-list">责编2<i class="tip"></i>
+                </li>
+                    <li class="editor-list">责编3<i class="tip"></i>
+                </li>
+                    <li class="editor-list">责编4<i class="tip"></i>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 添加组版弹层 -->
+  <div class="dialog" style="display: none;" id="groupEdition">
+    <div class="dialog_shadow_black">
+      <div class="alert_dialog_content">
+        <div class="alert_dialog_head">
+          <span id="title">添加组版</span>
+          <i class="icon iconfont icon-chuyidong"></i>
+        </div>
+        <div class="alert_dialog_body alert_dialog_body2 add-editor-box">
+          <div class="alert_dialog_content_wrapper">
+            <div class="search-bar">
+              <input type="text" name="" placeholder="请搜索你要查询的人">
+              <button type="button">
+                <i class="icon iconfont icon-123"></i>
+              </button>
+            </div>
+            <div class="editor-list-box">
+              <ul class="clx" id='editor-list'>
+                          <li class="editor-list">组版1<i class="tip"></i>
+                </li>
+                    <li class="editor-list">组版2<i class="tip"></i>
+                </li>
+                    <li class="editor-list">组版3<i class="tip"></i>
+                </li>
+                    <li class="editor-list">组版4<i class="tip"></i>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 添加记者弹层 -->
+  <div class="dialog" style="display: none;" id="reporter">
+    <div class="dialog_shadow_black">
+      <div class="alert_dialog_content">
+        <div class="alert_dialog_head">
+          <span id="title">添加记者</span>
+          <i class="icon iconfont icon-chuyidong"></i>
+        </div>
+        <div class="alert_dialog_body alert_dialog_body2 add-editor-box">
+          <div class="alert_dialog_content_wrapper">
+            <div class="search-bar">
+              <input type="text" name="" placeholder="请搜索你要查询的人">
+              <button type="button">
+                <i class="icon iconfont icon-123"></i>
+              </button>
+            </div>
+            <div class="editor-list-box">
+              <ul class="clx" id='editor-list'>
+                              <li class="editor-list">记者1<i class="tip"></i>
+                </li>
+                    <li class="editor-list">记者2<i class="tip"></i>
+                </li>
+                    <li class="editor-list">记者3<i class="tip"></i>
+                </li>
+                    <li class="editor-list">记者4<i class="tip"></i>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 添加通讯员弹层 -->
+  <div class="dialog" style="display: none;" id="caller">
+    <div class="dialog_shadow_black">
+      <div class="alert_dialog_content">
+        <div class="alert_dialog_head">
+          <span id="title">添加通讯员</span>
+          <i class="icon iconfont icon-chuyidong"></i>
+        </div>
+        <div class="alert_dialog_body alert_dialog_body2 add-editor-box">
+          <div class="alert_dialog_content_wrapper">
+            <div class="search-bar">
+              <input type="text" name="" placeholder="请搜索你要查询的人">
+              <button type="button">
+                <i class="icon iconfont icon-123"></i>
+              </button>
+            </div>
+            <div class="editor-list-box">
+              <ul class="clx" id='editor-list'>
+                             <li class="editor-list">通讯员1<i class="tip"></i>
+                </li>
+                    <li class="editor-list">通讯员2<i class="tip"></i>
+                </li>
+                    <li class="editor-list">通讯员3<i class="tip"></i>
+                </li>
+                    <li class="editor-list">通讯员4<i class="tip"></i>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 查看版面评分 -->
+  <div class="dialog" style="display: none;" id="pageScore">
+    <div class="dialog_shadow_black">
+      <div class="alert_dialog_content">
+        <div class="alert_dialog_head">
+          <span>第一版 要闻</span>
+          <i class="icon iconfont icon-chuyidong"></i>
+        </div>
+        <div class="alert_dialog_body alert_dialog_body2 add-editor-box">
+          <div class="alert_dialog_content_wrapper">
+            <div class="table-list-box">
+              <table border="0" cellpadding="0" cellspacing="0" style="margin-bottom: 30px;">
+                <thead>
+                  <tr>
+                    <th>
+                      <div class="d-title">
+                        <table border="0" cellpadding="0" cellspacing="0">
+                          <thead>
+                            <tr>
+                              <th></th>
+                              <th style="font-size: 14px;">评分人</th>
+                            </tr>
+                            <tr>
+                              <th style="font-size: 14px;">责编</th>
+                              <th></th>
+                            </tr>
+                          </thead>
+                        </table>
+                      </div>
+                    </th>
+                    <th style="background-color: #f2f2f2;">赵大猫</th>
+                    <th style="background-color: #f2f2f2;">赵大猫</th>
+                    <th style="background-color: #f2f2f2;">赵大猫</th>
+                    <th style="background-color: #f2f2f2;">赵大猫</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="work-type">主编1</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                  </tr>
+                  <tr>
+                    <td class="work-type">主编2</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                  </tr>
+                  <tr>
+                    <td class="work-type">主编3</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table border="0" cellpadding="0" cellspacing="0">
+                <thead>
+                  <tr>
+                    <th>
+                      <div class="d-title">
+                        <table border="0" cellpadding="0" cellspacing="0">
+                          <thead>
+                            <tr>
+                              <th></th>
+                              <th style="font-size: 14px;">评分人</th>
+                            </tr>
+                            <tr>
+                              <th style="font-size: 14px;">组版</th>
+                              <th></th>
+                            </tr>
+                          </thead>
+                        </table>
+                      </div>
+                    </th>
+                    <th style="background-color: #f2f2f2;">赵大猫</th>
+                    <th style="background-color: #f2f2f2;">赵大猫</th>
+                    <th style="background-color: #f2f2f2;">赵大猫</th>
+                    <th style="background-color: #f2f2f2;">赵大猫</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="work-type">主编1</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                  </tr>
+                  <tr>
+                    <td class="work-type">主编2</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                  </tr>
+                  <tr>
+                    <td class="work-type">主编3</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 查看文章评分 -->
+  <div class="dialog" style="display: none;" id="articleScore">
+    <div class="dialog_shadow_black">
+      <div class="alert_dialog_content">
+        <div class="alert_dialog_head">
+          <span>第一版 要闻</span>
+          <i class="icon iconfont icon-chuyidong"></i>
+        </div>
+        <div class="alert_dialog_body alert_dialog_body2 add-editor-box">
+          <div class="alert_dialog_content_wrapper">
+            <div class="table-list-box">
+              <table border="0" cellpadding="0" cellspacing="0" style="margin-bottom: 30px;">
+                <thead>
+                  <tr>
+                    <th>
+                      <div class="d-title">
+                        <table border="0" cellpadding="0" cellspacing="0">
+                          <thead>
+                            <tr>
+                              <th></th>
+                              <th style="font-size: 14px;">评分人</th>
+                            </tr>
+                            <tr>
+                              <th style="font-size: 14px;">记者</th>
+                              <th></th>
+                            </tr>
+                          </thead>
+                        </table>
+                      </div>
+                    </th>
+                    <th style="background-color: #f2f2f2;">赵大猫</th>
+                    <th style="background-color: #f2f2f2;">赵大猫</th>
+                    <th style="background-color: #f2f2f2;">赵大猫</th>
+                    <th style="background-color: #f2f2f2;">赵大猫</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="work-type">主编1</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                  </tr>
+                  <tr>
+                    <td class="work-type">主编2</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                  </tr>
+                  <tr>
+                    <td class="work-type">主编3</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table border="0" cellpadding="0" cellspacing="0">
+                <thead>
+                  <tr>
+                    <th>
+                      <div class="d-title">
+                        <table border="0" cellpadding="0" cellspacing="0">
+                          <thead>
+                            <tr>
+                              <th></th>
+                              <th style="font-size: 14px;">评分人</th>
+                            </tr>
+                            <tr>
+                              <th style="font-size: 14px;">通讯员</th>
+                              <th></th>
+                            </tr>
+                          </thead>
+                        </table>
+                      </div>
+                    </th>
+                    <th style="background-color: #f2f2f2;">赵大猫</th>
+                    <th style="background-color: #f2f2f2;">赵大猫</th>
+                    <th style="background-color: #f2f2f2;">赵大猫</th>
+                    <th style="background-color: #f2f2f2;">赵大猫</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="work-type">主编1</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                  </tr>
+                  <tr>
+                    <td class="work-type">主编2</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                  </tr>
+                  <tr>
+                    <td class="work-type">主编3</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 查看文章详情 -->
+  <div class="dialog" style="display: none;"  id="articleDetails">
+    <div class="dialog_shadow_black">
+      <div class="alert_dialog_content" style="width: 1000px;">
+        <div class="alert_dialog_head">
+          <span>文章详情</span>
+          <i class="icon iconfont icon-chuyidong"></i>
+        </div>
+        <!-- <div class="alert_dialog_body article-body clx"> -->
+            <div class="alert_dialog_body article-body">
+          <div class="article-left">
+            <div class="article-left-item">
+              <img src="../img/jpg1.jpg">
+            </div>
+          </div>
+          <div class="article-right">
+            <div class="article-right-item">
+              <div class="article-right-title">
+                <div class="btitle">圆陀角：奔向“黄金时代</div>
+                <div class="stitle">
+                  <span>阅读数：407</span>
+                  <span>本文字数：1636</span>
+                  <span>作者：张三丰</span>
+                </div>
+              </div>
+              <div class="article-right-content">
+                <p>圆陀角旅游度假区内圆陀角公园、新湖长江公园、恒大威尼斯碧海银沙、黄金海滩等景点，由南至北分布各处，中部为寅兴垦区养殖区，北部和西部主要为村落。根据这一特点，圆陀角旅游度假区自成立伊始，就科学制定发展规划，最终确定“由南至北，先东后西”的开发次序。</p>
+                <p>圆陀角旅游度假区内圆陀角公园、新湖长江公园、恒大威尼斯碧海银沙、黄金海滩等景点，由南至北分布各处，中部为寅兴垦区养殖区，北部和西部主要为村落。根据这一特点，圆陀角旅游度假区自成立伊始，就科学制定发展规划，最终确定“由南至北，先东后西”的开发次序。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="../js/common.js"></script>
+</body>
+
+</html>
